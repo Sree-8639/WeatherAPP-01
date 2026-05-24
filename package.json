@@ -1,0 +1,51 @@
+{
+  "name": "weatherapp-01",
+  "version": "1.0.0",
+  "description": "Real-time Weather Forecasting Platform - Professional Weather Application",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "real-time",
+    "weather-app",
+    "openweathermap",
+    "glassmorphism",
+    "responsive",
+    "vanilla-javascript"
+  ],
+  "author": "Sree-8639",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sree-8639/WeatherAPP-01.git"
+  },
+  "homepage": "https://github.com/Sree-8639/WeatherAPP-01#readme",
+  "bugs": {
+    "url": "https://github.com/Sree-8639/WeatherAPP-01/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "files": [
+    "index.html",
+    "css/",
+    "js/",
+    "assets/",
+    "server.js",
+    "README.md",
+    "SETUP_GUIDE.md",
+    "DEPLOYMENT.md",
+    "ARCHITECTURE.md"
+  ]
+}
