@@ -46,7 +46,7 @@ app.use((err, req, res, next) => {
 
 // Start server
 const PORT = process.env.PORT || 8000;
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`
 ╔════════════════════════════════════════╗
 ║     🌤️  Weather APP - Server Ready     ║
@@ -54,35 +54,14 @@ const server = app.listen(PORT, () => {
 ║ Server running on: http://localhost:${PORT}   ║
 ║ API Health: http://localhost:${PORT}/health  ║
 ║ Status: ✅ Production Ready             ║
-║ Environment: ${process.env.NODE_ENV || 'development'}            ║
 ╚════════════════════════════════════════╝
   `);
 });
 
-// Handle uncaught exceptions
-process.on('uncaughtException', (err) => {
-  console.error('Uncaught Exception:', err);
-  // Keep process running
-  process.exit(1);
-});
-
-// Handle unhandled promise rejections
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-  // Keep process running
-});
-
 // Graceful shutdown
 process.on('SIGTERM', () => {
-  console.log('SIGTERM received: closing HTTP server gracefully');
+  console.log('SIGTERM received: closing HTTP server');
   server.close(() => {
     console.log('HTTP server closed');
-    process.exit(0);
   });
-  
-  // Force close after 30 seconds
-  setTimeout(() => {
-    console.error('Forced shutdown after timeout');
-    process.exit(1);
-  }, 30000);
 });
