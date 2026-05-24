@@ -43,9 +43,6 @@
     "js/",
     "assets/",
     "server.js",
-    "README.md",
-    "SETUP_GUIDE.md",
-    "DEPLOYMENT.md",
-    "ARCHITECTURE.md"
+    "README.md"
   ]
 }
